@@ -8,7 +8,13 @@ const Login = () => {
       setUser(event.target.value);
       if(event.target.value.includes("o") || event.target.value.includes("O")){
         alert("Por favor, ¡Nombres de usuario sin la letra o! ");
-            return;
+        userRef.current.focus();
+        userRef.current.style.borderColor = "red";
+        userRef.current.style.outline = "none";
+      }else {
+        userRef.current.focus();
+        userRef.current.style.borderColor = "black";
+        userRef.current.style.outline = "none";
       }
     };
 
